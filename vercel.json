@@ -1,14 +1,12 @@
 {
-  "functions": {
-    "api/server.js": {
-      "memory": 1024,
-      "includeFiles": "db.json"
-    }
-  },
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "api/server.js"
+      "source": "/help",
+      "destination": "https://chatbase.co/Radiant UX/help"
+    },
+    {
+      "source": "/help/:path*",
+      "destination": "https://chatbase.co/Radiant UX/help/:path*"
     }
   ]
 }
