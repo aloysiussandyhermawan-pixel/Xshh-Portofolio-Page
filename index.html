@@ -3,492 +3,600 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Ash Portofolio</title>
+    <title>Xshh Portofolio Page</title>
     
 
   </head>
     
   <body>
-  <!doctype html>
+  <!--
+  🌐 Project: Personal Web - Xshh
+  🔧 Created by: Xshh
+  📅 Year: 2025
+  📝 License: MIT
+  📁 GitHub: https://github.com/xshh/thatsme
+-->
+
+
+
+
+<!DOCTYPE html>
 <html lang="en" class="transition-colors duration-300">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xshh — Portfolio</title>
-
-  <!-- Meta OpenGraph / Twitter -->
-  <meta property="og:title" content="Xshh - Personal Portfolio"/>
-  <meta property="og:description" content="Personal web portfolio by Xshh."/>
-  <meta property="og:image" content="https://files.catbox.moe/7x1rs0.png"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Xshh - Personal Portfolio"/>
-  <meta name="twitter:description" content="Explore the digital world of Xshh."/>
-  <meta name="twitter:image" content="https://files.catbox.moe/7x1rs0.png"/>
-
-  <!-- Tailwind + Font -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xshh - Portofolio</title>
+<meta property="og:title" content="Xshh - Personal Portfolio" />
+<meta property="og:description" content="Personal web portofolio by Xshh." />
+<meta property="og:image" content="https://files.catbox.moe/7x1rs0.png
+" />
+<meta property="og:url" content="https://github.com/aloysiussandyhermawan-pixel" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Xshh - Personal Portfolio" />
+<meta name="twitter:description" content="Explore the digital world of Xshh." />
+<meta name="twitter:image" content="https://files.catbox.moe/7x1rs0.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class' }
+    tailwind.config = {
+      darkMode: 'class'
+    }
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    :root { --primary-color: #0F0F0F; --secondary-color: #9B59B6; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; }
-    /* small visual tweaks */
-    .link-card { transition: transform .25s ease, box-shadow .25s ease; border-radius: 12px; overflow: hidden; }
-    .link-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.12); }
-    .social-icon { transition: transform .2s ease; }
-    .social-icon:hover { transform: scale(1.05); }
-    /* shiny badge */
-    .shiny-badge { position: relative; overflow: hidden; background-color: #f1f5f9; color:#334155; }
-    .dark .shiny-badge { background-color:#0f1724; color:#e2e8f0; }
-    .shiny-badge::before { content:""; position:absolute; top:0; left:-75%; width:150%; height:100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
-      animation: shine 2.5s infinite; z-index:0; }
-    .shiny-badge > * { position:relative; z-index:1; }
-    @keyframes shine { 0%{left:-75%} 100%{left:100%} }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');:root {
+  --primary-color: #0F0F0F;
+  --secondary-color: #9B59B6;
+}
 
-    /* crown glow + particle */
-    @keyframes crown-glow { 0%{filter: drop-shadow(0 0 3px #facc15); opacity:1} 50%{filter:drop-shadow(0 0 6px #fde68a);opacity:.75} 100%{filter:drop-shadow(0 0 3px #facc15);opacity:1} }
-    .glow-crown { animation: crown-glow 1.5s infinite ease-in-out; }
-    .particle-crown::before, .particle-crown::after { content:''; position:absolute; top:90%; left:50%; width:3px; height:3px; background:#facc15; border-radius:50%; opacity:0; animation:dust-fall 2s infinite ease-in-out; }
-    .particle-crown::after { left:55%; animation-delay:1s; }
-    @keyframes dust-fall { 0%{transform:translateY(0) scale(1);opacity:0} 30%{opacity:1} 100%{transform:translateY(15px) scale(.5);opacity:0} }
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
-    /* music progress minimal */
-    .progress-bar { transition: width .1s linear; height:100%; background:var(--primary-color); border-radius:2px; }
+.banner {
+  height: 200px;
+  background-image: url('https://files.catbox.moe/hsi6dw.gif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    /* small responsive tweaks for project thumbnails */
-    .project-thumb { aspect-ratio: 16/9; object-fit: cover; border-radius:8px; width:100%; display:block; }
+.link-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
 
-    /* navbar blur on scroll (small effect) */
-    .nav-backdrop { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.social-icon {
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  color: white;
+  cursor: pointer;
+}
+
+.badge,
+.shiny-badge {
+  border-radius: 9999px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.shiny-badge {
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  color: #334155;
+  z-index: 0;
+}
+
+.dark .shiny-badge {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+.shiny-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shine 2.5s infinite;
+  z-index: 1;
+}
+
+.shiny-badge > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 30;
+  overflow: hidden;
+}
+
+.dark .dropdown {
+  background-color: #1e293b;
+  color: white;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.dark .dropdown-item:hover {
+  background-color: #334155;
+}
+/* Music Player Styles */
+.music-player {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+.dark .music-player {
+  background-color: #1e293b;
+}
+
+.player-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.music-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin: 5px 0;
+}
+.dark .music-title {
+  color: #f1f5f9;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 5px 0;
+  position: relative;
+}
+.dark .progress-container {
+  background: #475569;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  width: 100%;
+}
+.dark .time-display {
+  color: #cbd5e1;
+}
+
+.cover-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+  font-size: 1.25rem;
+}
+
+.play-button:hover {
+  color: var(--secondary-color);
+}
+    /* Kelap-kelip */
+@keyframes crown-glow {
+  0%   { filter: drop-shadow(0 0 3px #facc15); opacity: 1; }
+  50%  { filter: drop-shadow(0 0 6px #fde68a); opacity: 0.7; }
+  100% { filter: drop-shadow(0 0 3px #facc15); opacity: 1; }
+}
+
+.glow-crown {
+  animation: crown-glow 1.5s infinite ease-in-out;
+}
+
+/* Partikel debu */
+.particle-crown::before,
+.particle-crown::after {
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background: #facc15;
+  border-radius: 50%;
+  opacity: 0;
+  animation: dust-fall 2s infinite ease-in-out;
+}
+
+.particle-crown::after {
+  left: 55%;
+  animation-delay: 1s;
+}
+
+@keyframes dust-fall {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px) scale(0.5);
+    opacity: 0;
+  }
+}
   </style>
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+<!-- Loader -->
 
-  <!-- NAVBAR -->
-  <header class="fixed w-full z-40">
-    <nav id="topnav" class="nav-backdrop bg-white/70 dark:bg-gray-900/60 border-b border-gray-100 dark:border-gray-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <a href="#home" class="flex items-center gap-3">
-            <img src="https://files.catbox.moe/7x1rs0.png" alt="logo" class="w-9 h-9 rounded-full border-2 border-white dark:border-gray-800"/>
-            <span class="font-semibold text-lg">Xshh</span>
-          </a>
-
-          <div class="hidden md:flex items-center gap-6">
-            <a href="#home" class="hover:underline">Home</a>
-            <a href="#about" class="hover:underline">About</a>
-            <a href="#projects" class="hover:underline">Projects</a>
-            <a href="#certificate" class="hover:underline">Certificate</a>
-            <a href="#contact" class="hover:underline">Contact</a>
-            <button id="theme-toggle" class="p-2 rounded-md shiny-badge"><i id="theme-icon" class="fas fa-moon"></i></button>
-          </div>
-
-          <!-- mobile -->
-          <div class="md:hidden flex items-center">
-            <button id="theme-toggle-sm" class="p-2 rounded-md shiny-badge mr-2"><i class="fas fa-moon"></i></button>
-            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-md border border-gray-200 dark:border-gray-700">
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- mobile menu content -->
-      <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-4 pb-4 space-y-2">
-          <a href="#home" class="block">Home</a>
-          <a href="#about" class="block">About</a>
-          <a href="#projects" class="block">Projects</a>
-          <a href="#certificate" class="block">Certificate</a>
-          <a href="#contact" class="block">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main class="pt-20">
-
-    <!-- BANNER / HERO -->
-    <section id="home" class="banner relative">
-      <div class="h-48 md:h-56 bg-cover bg-center" style="background-image:url('https://files.catbox.moe/hsi6dw.gif')"></div>
-
-      <div class="max-w-4xl mx-auto px-4 -mt-14">
-        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg relative">
-          <!-- profile row -->
-          <div class="flex flex-col md:flex-row items-center gap-4">
-            <div class="relative">
-              <div class="w-32 h-32 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-800 overflow-hidden">
-                <img src="https://files.catbox.moe/7x1rs0.png" alt="Profile" class="w-full h-full object-cover"/>
-                <i class="fas fa-crown text-yellow-400 text-xl absolute -top-2 right-2 rotate-[25deg] glow-crown"></i>
-                <i class="fas fa-crown text-yellow-400 text-xl absolute -top-2 right-2 rotate-[25deg] glow-crown particle-crown"></i>
-              </div>
-            </div>
-
-            <div class="flex-1 text-center md:text-left">
-              <h1 class="text-2xl md:text-3xl font-bold">Xshh <span class="text-sm text-gray-500 dark:text-gray-300"> (Aloysius Sandy H.O)</span></h1>
-              <p class="mt-1 text-gray-600 dark:text-gray-300">I build websites, design UI/UX, and make small projects to learn. Making a Website and Chilling.</p>
-
-              <div class="mt-3 flex flex-wrap gap-2 items-center justify-center md:justify-start">
-                <span class="badge shiny-badge px-3 py-1 text-sm flex items-center gap-2"><i class="fas fa-music text-indigo-500"></i><span>Music Lover</span></span>
-                <span class="badge shiny-badge px-3 py-1 text-sm flex items-center gap-2"><i class="fas fa-code text-green-500"></i><span>Dev</span></span>
-                <span class="badge shiny-badge px-3 py-1 text-sm flex items-center gap-2"><i class="fas fa-gamepad text-pink-500"></i><span>Gamer</span></span>
-                <span id="birthday-countdown" class="badge shiny-badge px-3 py-1 text-sm flex items-center gap-2"><i class="fas fa-calendar-day"></i><span id="birthday-countdown-text">Loading...</span></span>
-              </div>
-
-              <div class="mt-4 flex items-center gap-3 justify-center md:justify-start">
-                <a href="https://github.com/aloysiussandyhermawan-pixel" class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/its.notxshh/" class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 text-pink-500 dark:text-pink-300 shadow">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/6281392486568" class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 text-green-500 dark:text-green-300 shadow">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- music player -->
-          <div class="music-player mt-5 bg-white dark:bg-gray-900 rounded-lg p-4 shadow md:flex md:items-center md:gap-4">
-            <div class="flex-shrink-0 w-20 h-20 rounded-md overflow-hidden">
-              <img src="https://files.catbox.moe/lcm89p.webp" alt="cover" class="w-full h-full object-cover"/>
-            </div>
-
-            <div class="flex-1 mt-3 md:mt-0">
-              <audio id="audio-player" src="https://files.catbox.moe/33k8lo.mp3"></audio>
-              <div class="flex items-center gap-3">
-                <button class="play-button p-2 rounded-full border" onclick="togglePlay()"><i class="fas fa-play"></i></button>
-                <div class="w-full">
-                  <div class="progress-container h-2 bg-gray-200 dark:bg-gray-700 rounded-md cursor-pointer" onclick="seek(event)">
-                    <div id="progress-bar" class="progress-bar w-0 h-full rounded-md"></div>
-                  </div>
-                  <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    <span id="current-time">0:00</span>
-                    <span id="duration">0:00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-2 text-sm font-medium music-title">homesick - wave to earth</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="max-w-4xl mx-auto px-4 py-12">
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
-        <h2 class="text-xl font-bold mb-3">About Me</h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">
-          Hi — I'm <strong>Xshh</strong> (Aloysius Sandy H.O). I'm passionate about UI/UX design and front-end development.
-          I like crafting clean interfaces and learning new web techniques. I build small personal projects like music players,
-          portfolio pages, and community websites to sharpen my skills.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h3 class="font-semibold">What I do</h3>
-            <ul class="list-disc ml-5 mt-2 text-gray-600 dark:text-gray-300">
-              <li>Front-end development (HTML, CSS, JS, Tailwind)</li>
-              <li>UI / UX design and prototyping</li>
-              <li>Personal projects: music players, portfolio pages, community sites</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold">Tools & Skills</h3>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <span class="px-3 py-1 shiny-badge text-sm">HTML</span>
-              <span class="px-3 py-1 shiny-badge text-sm">CSS</span>
-              <span class="px-3 py-1 shiny-badge text-sm">JavaScript</span>
-              <span class="px-3 py-1 shiny-badge text-sm">Tailwind</span>
-              <span class="px-3 py-1 shiny-badge text-sm">Figma</span>
-              <span class="px-3 py-1 shiny-badge text-sm">Git</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4">
-          <h3 class="font-semibold mb-2">Experience / Notes</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">
-            I study by building—so most of my skills are self-driven through project work and deploying to platforms
-            like Vercel. If you want to collaborate or hire me for a simple front-end / UI task, hit the contact section below.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="max-w-4xl mx-auto px-4 py-12">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-xl font-bold">Projects</h2>
-        <p class="text-sm text-gray-500 dark:text-gray-400">Click thumbnails to open project</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <!-- Project 1 -->
-        <a href="https://xshh-portofolio-page.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://files.catbox.moe/z5b8ul.png" alt="Portofolio Page" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">Portofolio Page</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Personal portfolio page</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="https://u-tech-website.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://files.catbox.moe/iqm9bt.png" alt="U-Tech Website" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">U-Tech Website</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Community website</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="https://portofolio-3-d-print.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://placehold.co/600x338?text=3D+Print" alt="3D Print" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">Portofolio 3D Print</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">3D printing showcase</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-
-        <!-- Project 4 -->
-        <a href="https://music-player-project-one.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://files.catbox.moe/1803k1.png" alt="Music Playlist" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">Music Playlist</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Music player project</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-
-        <!-- Project 5 -->
-        <a href="https://portofolio-robotic.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://placehold.co/600x338?text=Robotic" alt="Robotic" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">Portofolio Robotic</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Robotics projects</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-
-        <!-- Project 6 -->
-        <a href="https://portofolio-metaverse.vercel.app/" target="_blank" class="group link-card bg-white dark:bg-gray-800 p-3 shadow">
-          <img src="https://placehold.co/600x338?text=Metaverse" alt="Metaverse" class="project-thumb mb-3"/>
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-semibold">Portofolio Metaverse</h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400">Metaverse concept</p>
-            </div>
-            <i class="fas fa-chevron-right text-gray-400 group-hover:text-indigo-500"></i>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- CERTIFICATES -->
-    <section id="certificate" class="max-w-4xl mx-auto px-4 py-12">
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
-        <h2 class="text-xl font-bold mb-4">Certificate</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <a href="https://files.catbox.moe/4wklut.png" target="_blank" class="group">
-            <img src="https://files.catbox.moe/4wklut.png" alt="certificate" class="rounded-md shadow-sm w-full object-cover"/>
-            <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">Japanese Open House 2024/2025</div>
-          </a>
-
-          <div>
-            <div class="mb-3">
-              <img src="https://placehold.co/600x338?text=Certificate+Placeholder" alt="cert2" class="rounded-md shadow-sm w-full object-cover"/>
-              <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">Japanese Open House 2025/2026 (placeholder)</div>
-            </div>
-            <div>
-              <img src="https://placehold.co/600x338?text=Certificate+Placeholder" alt="cert3" class="rounded-md shadow-sm w-full object-cover"/>
-              <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">U-Tech 2025/2026 (placeholder)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 py-12">
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
-        <h2 class="text-xl font-bold mb-4">Get in touch</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <p class="text-gray-600 dark:text-gray-300">Prefer quick contact? Use the social links or send me a message using the form.</p>
-
-            <div class="mt-4 space-y-2">
-              <a href="https://github.com/aloysiussandyhermawan-pixel" class="inline-flex items-center gap-2 px-3 py-2 rounded-md border"> <i class="fab fa-github"></i> GitHub</a>
-              <a href="https://www.instagram.com/its.notxshh/" class="inline-flex items-center gap-2 px-3 py-2 rounded-md border"> <i class="fab fa-instagram"></i> Instagram</a>
-              <a href="https://wa.me/6281392486568" class="inline-flex items-center gap-2 px-3 py-2 rounded-md border"> <i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
-          </div>
-
-          <div>
-            <!-- simple mailto form (no server needed) -->
-            <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain" class="space-y-3">
-              <input name="name" required class="w-full rounded-md px-3 py-2 bg-gray-50 dark:bg-gray-700" placeholder="Your name" />
-              <input name="email" required type="email" class="w-full rounded-md px-3 py-2 bg-gray-50 dark:bg-gray-700" placeholder="Your email" />
-              <textarea name="message" required rows="4" class="w-full rounded-md px-3 py-2 bg-gray-50 dark:bg-gray-700" placeholder="Your message"></textarea>
-              <div class="flex items-center gap-3">
-                <button type="submit" class="px-4 py-2 rounded-md bg-indigo-600 text-white">Send</button>
-                <button type="button" onclick="copyEmail()" class="px-4 py-2 rounded-md border">Copy email</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="mt-6 text-xs text-gray-500 dark:text-gray-400">
-          <p>Made with ❤️ by Xshh — SMA Regina Pacis Surakarta</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER (small) -->
-  <footer class="py-6">
-    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
-      © 2025 Xshh. All rights reserved.
+  <!-- Banner -->
+  <div class="banner relative">
+    <div class="menu-toggle" onclick="toggleDropdown()">
+      <i class="fas fa-ellipsis-v text-white text-xl"></i>
     </div>
-  </footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileBtn?.addEventListener('click', () => {
-      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-      mobileBtn.setAttribute('aria-expanded', !expanded);
-      mobileMenu.classList.toggle('hidden');
-    });
+    <!-- Light / Dark -->
+    <div id="theme-menu" class="dropdown hidden">
+  <div class="dropdown-item flex items-center gap-2" onclick="setTheme('light')">
+    <i class="fas fa-sun"></i> Light
+  </div>
+  <div class="dropdown-item flex items-center gap-2" onclick="setTheme('dark')">
+    <i class="fas fa-moon"></i> Dark
+  </div>
+</div>
+  </div> 
 
-    // Theme toggle
-    const htmlEl = document.documentElement;
-    const themeBtn = document.getElementById('theme-toggle');
-    const themeBtnSm = document.getElementById('theme-toggle-sm');
-    const themeIcon = document.getElementById('theme-icon');
+  <!-- Profile Image --> 
+    <div class="flex justify-center relative -mt-16 z-20">
+  <div class="w-32 h-32 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg border-4 border-white dark:border-gray-800 relative">
+    <img src="https://files.catbox.moe/7x1rs0.png" 
+         alt="Profile" 
+         class="w-full h-full object-cover rounded-full" 
+         onerror="this.onerror=null;this.src='https://placehold.co/300x300?text=Profile+Photo'" />
 
-    function applyTheme(theme) {
-      htmlEl.classList.toggle('dark', theme === 'dark');
-      localStorage.setItem('theme', theme);
-      if (themeIcon) themeIcon.className = (theme === 'dark') ? 'fas fa-sun' : 'fas fa-moon';
+    <!-- Animated Crown -->
+    <i class="fas fa-crown text-yellow-400 text-xl absolute -top-2 right-2 rotate-[25deg] glow-crown"></i>
+    <i class="fas fa-crown text-yellow-400 text-xl absolute -top-2 right-2 rotate-[25deg] glow-crown particle-crown"></i>
+  </div>
+</div>
+  
+  <!-- Main Content -->  
+  <div class="container mx-auto px-4 pt-6 pb-8 max-w-md">
+    <div class="text-center mb-8">
+      <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-1 flex items-center justify-center gap-1">
+  Xshh (Aloysius Sandy H.O)
+  <i class="fas fa-circle-check text-blue-500 text-base" title="Verified"></i>
+</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">Hobby</p>
+      <p class="text-gray-700 dark:text-gray-300 px-4 text-sm">
+        Making a Website and Chilling.
+      </p>
+
+<!-- Birthday-->
+      <div class="flex flex-wrap gap-2 justify-center mt-2" id="user-tags">
+  <span class="badge bg-indigo-600 text-white text-sm px-3 py-1 rounded-full flex items-center gap-1">
+    <i class="fas fa-calendar-day"></i>
+    <span id="birthday-countdown-text">Loading...</span>
+  </span>
+</div>
+     
+      <div class="flex justify-center mt-3 gap-2 flex-wrap">
+        <span class="badge shiny-badge">
+          <i class="fas fa-music text-indigo-500"></i> Music Lover 
+        </span>
+        <span class="badge shiny-badge">
+          <i class="fas fa-code text-green-500"></i> Dev 
+        </span>
+        <span class="badge shiny-badge">
+          <i class="fas fa-gamepad text-pink-500"></i> Gamer 
+        </span>
+      </div>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://github.com/aloysiussandyhermawan-pixel" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/its.notxshh/" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>      
+    </div>
+
+
+    
+
+<div class="music-player mb-8">
+  <div class="cover-image">
+    <img src="https://files.catbox.moe/lcm89p.webp" alt="Cover Image">
+  </div>
+  <div class="player-controls">
+    <audio id="audio-player" src="https://files.catbox.moe/33k8lo.mp3"></audio>
+    <div class="music-title">homesick - wave to earth</div>
+    <div class="flex items-center w-full mt-2">
+      <button class="play-button" onclick="togglePlay()">
+        <i class="fas fa-play"></i>
+      </button>
+      <div class="flex-1 px-3">
+        <div class="progress-container" onclick="seek(event)">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="time-display">
+          <span id="current-time">0:00</span>
+          <span id="duration">5:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- Link Cards -->
+    <div class="space-y-4 mb-8">
+  <a href="https://www.chatbase.co/aLh_UQj3DmFqIISxSxV2T/help" class="block">
+    <div class="link-card bg-white dark:bg-gray-800 p-5 flex items-center gap-4">
+      <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-100 to-green-100 dark:from-indigo-800 dark:to-green-800 flex items-center justify-center text-indigo-500 dark:text-indigo-300">
+        <i class="fas fa-star fa-lg"></i>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 dark:text-white">レイディアント (AI)</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click for use AI</p>
+      </div>
+      <div class="ml-auto text-gray-400 dark:text-gray-300">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  </a> 
+      <a href="https://wa.me/6281392486568"
+class="block">
+    <div class="link-card bg-white dark:bg-gray-800 p-5 flex items-center gap-4">
+      <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-800 dark:to-purple-800 flex items-center justify-center text-blue-500 dark:text-blue-300">
+        <i class="fab fa-whatsapp fa-lg"></i>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 dark:text-white">Whatsapp</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hire Me</p>
+      </div>
+      <div class="ml-auto text-gray-400 dark:text-gray-300">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  </a>  
+      <a href="https://u-tech-website.vercel.app/" class="block">
+    <div class="link-card bg-white dark:bg-gray-800 p-5 flex items-center gap-4">
+      <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-green-100 to-teal-100 dark:from-green-800 dark:to-teal-800 flex items-center justify-center text-green-500 dark:text-green-300">
+         <i class="fa-solid fa-play fa-rotate-270"></i>
+
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 dark:text-white">Community Link</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click To Website!</p>
+      </div>
+      <div class="ml-auto text-gray-400 dark:text-gray-300">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  </a>
+    </div>
+    <div class="text-center text-gray-500 text-xs">
+      <p>© 2025 My Portfolio. All rights reserved.</p>
+      <p class="mt-1">Made with ❤️ by Xshh</p>
+    </div>
+  </div>  
+
+<script>
+    const themeMenu = document.getElementById('theme-menu');
+
+    function toggleDropdown() {
+      themeMenu.classList.toggle('hidden');
     }
-    const savedTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    applyTheme(savedTheme);
 
-    themeBtn?.addEventListener('click', () => applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark'));
-    themeBtnSm?.addEventListener('click', () => applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark'));
-
-    // Music controls
-    const audio = document.getElementById('audio-player');
-    const playIcon = document.querySelector('.play-button i');
-    const progressBar = document.getElementById('progress-bar');
-    const currentTimeEl = document.getElementById('current-time');
-    const durationEl = document.getElementById('duration');
-
-    function togglePlay() {
-      if (!audio) return;
-      if (audio.paused) { audio.play(); playIcon.classList.remove('fa-play'); playIcon.classList.add('fa-pause'); }
-      else { audio.pause(); playIcon.classList.remove('fa-pause'); playIcon.classList.add('fa-play'); }
-    }
-    audio?.addEventListener('loadedmetadata', () => {
-      durationEl.textContent = formatTime(audio.duration || 0);
-    });
-    audio?.addEventListener('timeupdate', () => {
-      if (!audio.duration) return;
-      const pct = (audio.currentTime / audio.duration) * 100;
-      progressBar.style.width = pct + '%';
-      currentTimeEl.textContent = formatTime(audio.currentTime);
-      durationEl.textContent = formatTime(audio.duration);
-    });
-    function seek(e) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const percent = x / rect.width;
-      if (audio.duration) audio.currentTime = percent * audio.duration;
-    }
-    function formatTime(s) {
-      if (!s || isNaN(s)) return '0:00';
-      const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60);
-      return m + ':' + (sec < 10 ? '0' + sec : sec);
+    function setTheme(mode) {
+      const html = document.documentElement;
+      if (mode === 'dark') {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      themeMenu.classList.add('hidden');
     }
 
-    // birthday countdown
-    function updateBirthdayCountdown() {
-      const today = new Date();
-      // <-- change this date to your birthday if needed -->
-      const birthday = new Date("2025-11-24");
-      birthday.setHours(0,0,0,0);
-      today.setHours(0,0,0,0);
-      const diff = birthday - today;
-      const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
-      const el = document.getElementById('birthday-countdown-text');
-      if (!el) return;
-      if (daysLeft > 0) el.textContent = `${daysLeft} Days to Birthday`;
-      else if (daysLeft === 0) el.textContent = `🎂 Today is your Birthday!`;
-      else el.textContent = `🎉 Birthday Passed`;
-    }
-    updateBirthdayCountdown();
-
-    // copy email helper
-    function copyEmail() {
-      const email = 'your-email@example.com'; // replace with your email
-      navigator.clipboard?.writeText(email).then(() => {
-        alert('Email copied: ' + email);
-      }).catch(() => {
-        prompt('Copy this email:', email);
-      });
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     }
 
-    // smooth nav highlight (optional small effect)
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    function onScroll() {
-      const scrollPos = window.scrollY + 120;
-      sections.forEach(sec => {
-        const top = sec.offsetTop;
-        const bottom = top + sec.offsetHeight;
-        if (scrollPos >= top && scrollPos < bottom) {
-          navLinks.forEach(a => a.classList.remove('font-semibold'));
-          const link = document.querySelector(`nav a[href="#${sec.id}"]`);
-          if (link) link.classList.add('font-semibold');
-        }
-      });
-    }
-    window.addEventListener('scroll', onScroll);
-    onScroll();
+    const audio = document.getElementById("audio-player");
+  const playButton = document.querySelector(".play-button i");
+  const progressBar = document.getElementById("progress-bar");
+  const currentTimeEl = document.getElementById("current-time");
+  const durationEl = document.getElementById("duration");
 
-    // simple preloader hide if you want (kept minimal)
-    window.addEventListener('load', () => { setTimeout(()=>{ document.body.classList.remove('opacity-0') }, 150); });
+  function togglePlay() {
+    if (audio.paused) {
+      audio.play();
+      playButton.classList.remove("fa-play");
+      playButton.classList.add("fa-pause");
+    } else {
+      audio.pause();
+      playButton.classList.remove("fa-pause");
+      playButton.classList.add("fa-play");
+    }
+  }
+
+  audio.addEventListener("timeupdate", () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = `${progress}%`;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    durationEl.textContent = formatTime(audio.duration);
+  });
+
+  function seek(e) {
+    const container = e.currentTarget;
+    const rect = container.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const percentage = offsetX / rect.width;
+    audio.currentTime = percentage * audio.duration;
+  }
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60) || 0;
+    const secs = Math.floor(seconds % 60) || 0;
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+  }
+
+  
+  
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loader = document.getElementById("preloader");
+      if (loader) {
+        loader.classList.add("opacity-0"); 
+        setTimeout(() => {
+          loader.style.display = "none"; 
+        }, 500); 
+      }
+    }, 1000); 
+  });
+
+
+
+function updateBirthdayCountdown() {
+    const today = new Date();
+    const birthday = new Date("2025-11-24");
+
+    birthday.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+
+    const diffTime = birthday - today;
+    const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const el = document.getElementById("birthday-countdown-text");
+
+    if (daysLeft > 0) {
+      el.textContent = `${daysLeft} Days to Birthday`;
+    } else if (daysLeft === 0) {
+      el.textContent = `🎂 Today is your Birthday!`;
+    } else {
+      el.textContent = `🎉 Birthday Passed`;
+    }
+  }
+
+  updateBirthdayCountdown();
+
+    
   </script>
 </body>
 </html>
